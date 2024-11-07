@@ -1,0 +1,502 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Corpo do aplicativo */
+.app {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: green;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header nav {
+  margin-top: 10px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+}
+
+.threads-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.thread-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thread-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thread-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.thread-date {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.thread-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #e1e4e8;
+  color: #0074cc;
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  border-radius: 5px;
+}
+
+.answers-count {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.thread-card:hover {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para a página de detalhes da thread */
+.thread-detail {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thread-detail h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thread-detail p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.thread-detail small {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.thread-detail h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.thread-detail .answers-count {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+/* Estilos gerais para o formulário */
+.new-question {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.new-question h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.new-question .form-group {
+  margin-bottom: 15px;
+}
+
+.new-question label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.new-question input,
+.new-question textarea {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.new-question button {
+  width: 100%;
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.new-question button:hover {
+  background-color: #45a049;
+}
+
+.new-question .error {
+  color: red;
+  font-size: 1rem;
+  margin-bottom: 15px;
+}
+
+/* Estilizando o select */
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: #f9f9f9;
+  transition: all 0.3s ease;
+}
+
+select:focus {
+  outline: none;
+  border-color: #007bff;
+  background-color: #e9f2ff;
+}
+
+/* Estilizando o option */
+option {
+  padding: 10px;
+  font-size: 16px;
+  background-color: #ffffff;
+  color: #333;
+}
+
+/* Estilizando o option quando é selecionado */
+option:checked {
+  background-color: #007bff;
+  color: #fff;
+}
+
+/* Estilos gerais para a seção de responder */
+.thread-detail {
+  margin-top: 30px;
+}
+
+h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+form {
+  background-color: #f9f9f9;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+}
+
+/* Estilos para cada campo de input */
+input[type="text"],
+textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box; /* Inclui o padding e border no tamanho total */
+  transition: border-color 0.3s ease;
+}
+
+/* Foco nos campos de input e textarea */
+input[type="text"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Estilos para o botão de envio */
+button {
+  padding: 12px 20px;
+  background-color: #28a745;
+  color: white;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Efeito hover no botão */
+button:hover {
+  background-color: #218838;
+}
+
+/* Mensagem de erro */
+.error {
+  color: red;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Ajustes nos campos de entrada */
+input[type="text"] {
+  font-family: 'Arial', sans-serif;
+}
+
+/* Estilo do título e descrição */
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+/* Estilo geral do formulário de resposta */
+.form-group {
+  margin-bottom: 15px;
+}
+
+/* Estilo do grupo de threads por tag */
+.tag-group {
+  margin-bottom: 40px;
+}
+
+/* Título da tag */
+.tag-title {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 15px;
+}
+
+/* Estilo das threads dentro de cada tag */
+.tag-threads {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Cartões das threads */
+.thread-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.thread-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos e descrições das threads */
+.thread-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.thread-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Data da thread */
+.thread-date {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+/* Contador de respostas */
+.answers-count {
+  font-size: 0.875rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Estilo do grupo de threads */
+.threads-list {
+  display: flex;
+  flex-wrap: wrap; /* Para garantir que as threads sejam distribuídas em várias linhas */
+  gap: 20px; /* Espaço entre as threads */
+  justify-content: flex-start;
+}
+
+/* Cartões das threads */
+.thread-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%; /* Cada thread ocupará toda a largura disponível */
+  max-width: 1200px; /* Limitar a largura máxima do card */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.thread-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos e descrições das threads */
+.thread-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.thread-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Data da thread */
+.thread-date {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+/* Contador de respostas */
+.answers-count {
+  font-size: 0.875rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+/* Tag */
+.thread-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #007bff;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.875rem;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+/* Estilo do grupo de threads */
+.threads-list {
+  display: flex;
+  flex-direction: column;
+  gap: 40px; /* Espaço entre as seções de tags */
+}
+
+/* Seção de threads por tag */
+.threads-section {
+  margin-bottom: 40px;
+}
+
+/* Título da tag */
+.tag-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+  text-transform: uppercase;
+  border-bottom: 2px solid #007bff;
+  padding-bottom: 10px;
+}
+
+/* Cartões das threads */
+.thread-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 20px;
+  width: 100%; /* Cada thread ocupará toda a largura disponível */
+  max-width: 1200px; /* Limitar a largura máxima do card */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.thread-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Títulos e descrições das threads */
+.thread-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.thread-description {
+  font-size: 1rem;
+  color: #666;
+}
+
+/* Data da thread */
+.thread-date {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+/* Contador de respostas */
+.answers-count {
+  font-size: 0.875rem;
+  color: #007bff;
+  font-weight: bold;
+}
+
+nav a {
+  color: white;
+  margin-left: 15px;
+  text-decoration: none;
+}

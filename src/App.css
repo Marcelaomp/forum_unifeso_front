@@ -1,0 +1,136 @@
+/* Reset de estilos básicos */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Corpo do aplicativo */
+.app {
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+/* Cabeçalho */
+.header {
+  background-color: green;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+.header h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.header nav {
+  margin-top: 10px;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+}
+
+.header nav a:hover {
+  text-decoration: underline;
+}
+
+/* Main Content */
+.main-content {
+  padding: 20px;
+}
+
+.threads-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.thread-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thread-title {
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thread-description {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.thread-date {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.thread-tags {
+  margin-top: 10px;
+}
+
+.tag {
+  background-color: #e1e4e8;
+  color: #0074cc;
+  padding: 5px 10px;
+  font-size: 0.875rem;
+  border-radius: 5px;
+}
+
+.answers-count {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #333;
+}
+
+.thread-card:hover {
+  background-color: #f9f9f9;
+}
+
+/* Estilo para a página de detalhes da thread */
+.thread-detail {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.thread-detail h2 {
+  font-size: 2rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.thread-detail p {
+  font-size: 1rem;
+  color: #666;
+  margin-bottom: 10px;
+}
+
+.thread-detail small {
+  font-size: 0.875rem;
+  color: #999;
+}
+
+.thread-detail h3 {
+  font-size: 1.25rem;
+  color: #333;
+  margin-top: 20px;
+}
+
+.thread-detail .answers-count {
+  margin-top: 10px;
+  font-size: 0.875rem;
+  color: #333;
+}
