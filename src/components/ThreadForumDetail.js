@@ -14,7 +14,7 @@ const ThreadForumDetail = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:5089/api/ThreadForum/${id}`)
+      .get(`https://forumunifeso-production.up.railway.app/api/ThreadForum/${id}`)
       .then((response) => {
         setThread(response.data);
       })
@@ -55,7 +55,7 @@ const ThreadForumDetail = () => {
       };
 
       const postResponse = await axios.post(
-        `http://localhost:5089/api/Post`,
+        `https://forumunifeso-production.up.railway.app/api/Post`,
         responseData
       );
 

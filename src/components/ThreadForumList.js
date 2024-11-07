@@ -9,7 +9,7 @@ const ThreadForumList = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get("http://localhost:5089/all")
+    axios.get("https://forumunifeso-production.up.railway.app/all")
       .then(response => {
         setThreads(response.data);
         setLoading(false);

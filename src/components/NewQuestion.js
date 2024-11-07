@@ -29,7 +29,7 @@ const NewQuestion = () => {
 
     try {
       // Estrutura do corpo da requisição
-      const response = await axios.post("http://localhost:5089/add", {
+      const response = await axios.post("https://forumunifeso-production.up.railway.app/add", {
         topic: {
           title,
           description,
