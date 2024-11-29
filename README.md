@@ -5,6 +5,7 @@ Tecnologias utilizadas no projeto:
 - Backend: C# 
 - Banco de dados: SQL Server 
 - FrontEnd: React
+- Deploy: Railway
 
 Objetivo do projeto: 
 
